@@ -9,6 +9,7 @@ import { registerBlockType } from "@wordpress/blocks";
 
 import { registerFormatType, toggleFormat } from "@wordpress/rich-text";
 import { RichTextToolbarButton } from "@wordpress/block-editor";
+import { commentReplyLink } from "@wordpress/icons";
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * All files containing `style` keyword are bundled together. The code used
@@ -45,8 +46,8 @@ registerBlockType(metadata.name, {
 const MyCustomButton = ({ isActive, onChange, value }) => {
 	return (
 		<RichTextToolbarButton
-			icon="editor-commentReplyLink"
-			title="Skip 2 Translation"
+			icon={commentReplyLink}
+			title="Skip 4 Translation"
 			onClick={() => {
 				onChange(
 					toggleFormat(value, {
